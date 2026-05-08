@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Editar barbeiro · Admin{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <a href="/admin?tab=barbeiros" class="back-link">← Voltar ao painel</a>
+      <div class="card-dark">
+        <h2 style="margin:0 0 1.25rem">Editar barbeiro</h2>
+
+        <form method="post" action="/admin/barbeiros/{{ b.id }}/edit" class="booking-form">
+          <label>
+            Nome
+            <input name="nome" value="{{ b.nome }}" required />
+          </label>
+          <label>
+            Especialidade
+            <input name="especialidade" value="{{ b.especialidade or '' }}" placeholder="Ex.: degradê, barba" />
+          </label>
+          <label>
+            Foto (nome do arquivo em /static/barbeiros/)
+            <input name="foto" value="{{ b.foto or '' }}" placeholder="ex: calebe.jpg" />
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="ativo" {% if b.ativo %}checked{% endif %} />
+            <span>Ativo (aparece na tela de agendamento)</span>
+          </label>
+
+          <div class="actions" style="justify-content:flex-start;margin-top:.5rem">
+            <button type="submit" class="btn btn-primary">Salvar alterações</button>
+            <a href="/admin?tab=barbeiros" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Barbearia Invictus{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+    <link rel="stylesheet" href="/static/style.css?v=14" />
+  </head>
+  <body class="page-{{ active or 'inicio' }}">
+    <header class="site-header">
+      <a href="/" class="logo">
+        <span class="logo-mark">⚔</span>
+        <span class="logo-text">BARBEARIA INVICTUS</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/" class="{{ 'active' if active == 'inicio' else '' }}">INÍCIO</a>
+        <a href="/agendar" class="{{ 'active' if active == 'agendar' else '' }}">AGENDAR</a>
+        <a href="/produtos" class="{{ 'active' if active == 'produtos' else '' }}">PRODUTOS</a>
+        <a href="/admin" class="{{ 'active' if active == 'admin' else '' }}">ADMIN</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div>© 2026 Barbearia Invictus · Estilo é atitude.</div>
+      <div class="footer-links">
+        <a href="/privacidade">Política de Privacidade</a>
+        <span>·</span>
+        <a href="/lgpd/meus-dados">Excluir meus dados (LGPD)</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Editar produto · Admin{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <a href="/admin?tab=produtos" class="back-link">← Voltar ao painel</a>
+      <div class="card-dark">
+        <h2 style="margin:0 0 1.25rem">Editar produto</h2>
+
+        <form method="post" action="/admin/produtos/{{ p.id }}/edit" class="booking-form">
+          <label>
+            Nome
+            <input name="nome" value="{{ p.nome }}" required />
+          </label>
+          <label>
+            Descrição
+            <input name="descricao" value="{{ p.descricao or '' }}" />
+          </label>
+          <div class="row-2">
+            <label>
+              Preço (R$)
+              <input name="preco" value="{{ '%.2f'|format(p.preco) }}" required />
+            </label>
+            <label>
+              Estoque
+              <input name="estoque" type="number" min="0" value="{{ p.estoque }}" required />
+            </label>
+          </div>
+          <label>
+            Imagem (nome do arquivo em /static/produtos/)
+            <input name="imagem" value="{{ p.imagem or '' }}" placeholder="ex: cera-fosca.jpg" />
+          </label>
+
+          <div class="actions" style="justify-content:flex-start;margin-top:.5rem">
+            <button type="submit" class="btn btn-primary">Salvar alterações</button>
+            <a href="/admin?tab=produtos" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}

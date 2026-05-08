@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Auditoria · Admin{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <a href="/admin?tab=agendamentos" class="back-link">← Voltar ao painel</a>
+
+      <div class="admin-header">
+        <div>
+          <h2 class="section-title" style="margin:0;text-align:left">Trilha de Auditoria</h2>
+          <p class="section-sub" style="margin:.25rem 0 0;text-align:left">Últimos 200 eventos de segurança e administração.</p>
+        </div>
+      </div>
+
+      <div class="admin-section">
+        {% if eventos %}
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Quando</th>
+                  <th>Usuário</th>
+                  <th>Ação</th>
+                  <th>Detalhe</th>
+                  <th>IP</th>
+                  <th>Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for e in eventos %}
+                  <tr>
+                    <td>{{ e.quando.strftime("%d/%m/%Y %H:%M:%S") }}</td>
+                    <td>{{ e.usuario or '—' }}</td>
+                    <td><code>{{ e.acao }}</code></td>
+                    <td class="muted">{{ e.detalhe or '—' }}</td>
+                    <td class="muted">{{ e.ip or '—' }}</td>
+                    <td>
+                      {% if e.sucesso %}
+                        <span class="badge done">ok</span>
+                      {% else %}
+                        <span class="badge cancel">falha</span>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% else %}
+          <p class="empty">Nenhum evento registrado ainda.</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

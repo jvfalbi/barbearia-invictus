@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Política de Privacidade · Barbearia Invictus{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <h2 class="section-title">Política de Privacidade</h2>
+      <p class="section-sub">Conformidade com a Lei nº 13.709/2018 (LGPD).</p>
+
+      <div class="card-dark">
+        <h3 style="margin-top:0">1. Dados que coletamos</h3>
+        <ul class="lgpd-list">
+          <li><strong>Nome completo</strong> — para identificação no atendimento.</li>
+          <li><strong>Telefone</strong> (opcional) — para confirmar/reagendar o horário.</li>
+          <li><strong>E-mail</strong> (opcional) — para comprovante e comunicação.</li>
+          <li><strong>Histórico de agendamentos</strong> — para gestão da agenda.</li>
+          <li><strong>Endereço IP e data/hora de acesso</strong> — para segurança e auditoria.</li>
+        </ul>
+
+        <h3>2. Finalidade e base legal (Art. 7º LGPD)</h3>
+        <ul class="lgpd-list">
+          <li><strong>Execução do serviço de agendamento</strong> — Art. 7º, V (execução de contrato).</li>
+          <li><strong>Confirmação por telefone/e-mail</strong> — Art. 7º, I (consentimento livre e informado).</li>
+          <li><strong>Auditoria de acessos administrativos</strong> — Art. 7º, II (cumprimento de obrigação legal e segurança).</li>
+        </ul>
+
+        <h3>3. Compartilhamento</h3>
+        <p>Não vendemos, alugamos ou compartilhamos seus dados com terceiros para fins de marketing.
+        Apenas a equipe interna (barbeiros e administração) tem acesso.</p>
+
+        <h3>4. Tempo de armazenamento</h3>
+        <p>Os dados pessoais são mantidos enquanto houver relação ativa com a Barbearia Invictus.
+        Após sua solicitação de exclusão, os dados são <strong>anonimizados</strong> em até 7 dias úteis.
+        Os registros de agendamento permanecem (sem identificação pessoal) para fins fiscais e estatísticos.</p>
+
+        <h3>5. Seus direitos (Art. 18 LGPD)</h3>
+        <ul class="lgpd-list">
+          <li>Confirmação da existência de tratamento dos seus dados.</li>
+          <li>Acesso e correção de dados incompletos, inexatos ou desatualizados.</li>
+          <li>Anonimização ou eliminação de dados desnecessários.</li>
+          <li>Revogação do consentimento a qualquer momento.</li>
+        </ul>
+
+        <h3>6. Segurança</h3>
+        <p>Adotamos práticas de segurança da informação alinhadas ao OWASP Top 10:
+        senhas de administradores são armazenadas com hash <code>bcrypt</code>,
+        comunicação protegida por cabeçalhos de segurança HTTP,
+        proteção contra ataques de força bruta no login,
+        registro de auditoria de todas as ações administrativas.</p>
+
+        <h3>7. Encarregado (DPO)</h3>
+        <p class="muted">contato@barbeariainvictus.com.br · (11) 0000-0000</p>
+
+        <div class="actions" style="justify-content:flex-start;margin-top:1.5rem">
+          <a href="/lgpd/meus-dados" class="btn btn-secondary">Gerenciar meus dados</a>
+          <a href="/agendar" class="btn btn-primary">Agendar atendimento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Produtos · Barbearia Invictus{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Nossos Produtos</h2>
+      <p class="section-sub">Leve a qualidade da Barbearia Invictus para casa.</p>
+
+      {% if produtos %}
+        <div class="products-grid">
+          {% for p in produtos %}
+            <article class="product-card">
+              <div class="product-image">
+                {% if p.imagem %}
+                  <img src="/static/produtos/{{ p.imagem }}" alt="{{ p.nome }}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product-placeholder',textContent:'{{ p.nome[0]|upper }}'}))" />
+                {% else %}
+                  <div class="product-placeholder">{{ p.nome[0]|upper }}</div>
+                {% endif %}
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">{{ p.nome }}</h3>
+                {% if p.descricao %}
+                  <p class="product-desc">{{ p.descricao }}</p>
+                {% endif %}
+                <div class="product-meta">
+                  <span class="product-price">R$ {{ "%.2f"|format(p.preco) }}</span>
+                  <span class="product-stock {% if p.estoque <= 5 %}low{% endif %}">Estoque: {{ p.estoque }}</span>
+                </div>
+                <div class="product-actions">
+                  <button type="button" class="btn btn-primary btn-sm">Reservar</button>
+                  <a
+                    class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/5511900000000?text={{ ('Olá! Tenho interesse no produto: ' ~ p.nome) | urlencode }}"
+                    target="_blank"
+                    rel="noopener"
+                  >WhatsApp</a>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="empty">Nenhum produto cadastrado.</p>
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

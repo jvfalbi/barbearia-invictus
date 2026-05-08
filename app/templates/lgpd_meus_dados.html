@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Meus Dados (LGPD) · Barbearia Invictus{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <h2 class="section-title">Direito de Eliminação</h2>
+      <p class="section-sub">Solicite a anonimização dos seus dados pessoais (Art. 18, VI da LGPD).</p>
+
+      {% if ok %}
+        <div class="alert alert-success">
+          Seus dados foram anonimizados com sucesso. Os agendamentos passados permanecem
+          registrados sem qualquer informação pessoal.
+        </div>
+      {% endif %}
+      {% if erro == 'naoencontrado' %}
+        <div class="alert alert-error">Nenhum cliente encontrado com esse nome.</div>
+      {% endif %}
+      {% if erro == 'confirma' %}
+        <div class="alert alert-error">Você precisa marcar a confirmação.</div>
+      {% endif %}
+
+      <div class="card-dark">
+        <form method="post" action="/lgpd/excluir" class="booking-form">
+          <label>
+            Nome completo (como informou no agendamento)
+            <input name="nome" required />
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" name="confirma" />
+            <span>Confirmo que desejo anonimizar meus dados pessoais. Esta ação é irreversível.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Solicitar anonimização</button>
+        </form>
+
+        <p class="muted" style="margin-top:1rem">
+          Você também pode solicitar correção, acesso ou portabilidade dos seus dados
+          enviando e-mail para <strong>contato@barbeariainvictus.com.br</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

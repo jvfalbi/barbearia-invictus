@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}Agendar · Barbearia Invictus{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <h2 class="section-title">Agendar horário</h2>
+      <p class="section-sub">Escolha o barbeiro, o serviço e o horário desejado.</p>
+
+      <div class="barber-cards">
+        {% for b in barbeiros %}
+          <button type="button" class="barber-card" data-id="{{ b.id }}">
+            <div class="barber-photo">
+              {% if b.foto %}
+                <img src="/static/barbeiros/{{ b.foto }}" alt="{{ b.nome }}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'barber-initials',textContent:'{{ b.nome[0]|upper }}'}))" />
+              {% else %}
+                <div class="barber-initials">{{ b.nome[0]|upper }}</div>
+              {% endif %}
+            </div>
+            <div class="barber-name">{{ b.nome }}</div>
+          </button>
+        {% endfor %}
+      </div>
+
+      <form class="booking-form card-dark" method="post" action="/agendar">
+        <label>
+          Nome
+          <input name="nome" required placeholder="Seu nome completo" />
+        </label>
+
+        <div class="row-2">
+          <label>
+            Telefone (opcional)
+            <input name="telefone" placeholder="(11) 99999-0000" />
+          </label>
+          <label>
+            E-mail (opcional)
+            <input name="email" type="email" placeholder="seu@email.com" />
+          </label>
+        </div>
+
+        <label>
+          Barbeiro
+          <select name="barbeiro_id" id="barbeiro_id" required>
+            <option value="">Selecione...</option>
+            {% for b in barbeiros %}
+              <option value="{{ b.id }}">{{ b.nome }}</option>
+            {% endfor %}
+          </select>
+        </label>
+
+        <label>
+          Serviço
+          <select name="servico_id" required>
+            <option value="">Selecione...</option>
+            {% for s in servicos %}
+              <option value="{{ s.id }}">{{ s.nome }} — R$ {{ "%.2f"|format(s.preco) }}</option>
+            {% endfor %}
+          </select>
+        </label>
+
+        <div class="row-2">
+          <label>
+            Data
+            <input name="data" id="data-input" type="text" value="{{ hoje_iso }}" placeholder="Selecione a data" required readonly />
+          </label>
+          <label>
+            Hora
+            <select name="hora" required>
+              {% for h in horarios %}
+                <option value="{{ h }}">{{ h }}</option>
+              {% endfor %}
+            </select>
+          </label>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" name="consentimento_lgpd" required />
+          <span>Li e concordo com a <a href="/privacidade" target="_blank" style="color:var(--red);text-decoration:underline">Política de Privacidade</a> e autorizo o tratamento dos meus dados pessoais conforme a LGPD.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-lg">Confirmar Agendamento</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+  <script>
+    (function () {
+      const cards = document.querySelectorAll('.barber-card');
+      const select = document.getElementById('barbeiro_id');
+
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          cards.forEach((c) => c.classList.remove('is-active'));
+          card.classList.add('is-active');
+          if (select) select.value = card.dataset.id;
+        });
+      });
+
+      if (window.flatpickr) {
+        flatpickr('#data-input', {
+          locale: 'pt',
+          dateFormat: 'Y-m-d',
+          altInput: true,
+          altFormat: 'd/m/Y',
+          minDate: 'today',
+          disableMobile: true,
+        });
+      }
+    })();
+  </script>
+{% endblock %}

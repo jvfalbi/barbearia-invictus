@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Editar serviço · Admin{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <a href="/admin?tab=servicos" class="back-link">← Voltar ao painel</a>
+      <div class="card-dark">
+        <h2 style="margin:0 0 1.25rem">Editar serviço</h2>
+
+        <form method="post" action="/admin/servicos/{{ s.id }}/edit" class="booking-form">
+          <label>
+            Nome
+            <input name="nome" value="{{ s.nome }}" required />
+          </label>
+          <div class="row-2">
+            <label>
+              Duração (min)
+              <input name="duracao_minutos" type="number" min="5" max="480" value="{{ s.duracao_minutos }}" required />
+            </label>
+            <label>
+              Preço (R$)
+              <input name="preco" value="{{ '%.2f'|format(s.preco) }}" required />
+            </label>
+          </div>
+
+          <div class="actions" style="justify-content:flex-start;margin-top:.5rem">
+            <button type="submit" class="btn btn-primary">Salvar alterações</button>
+            <a href="/admin?tab=servicos" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}

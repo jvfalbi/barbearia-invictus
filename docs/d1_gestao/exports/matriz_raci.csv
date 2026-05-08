@@ -1,0 +1,34 @@
+﻿Pacote da EAP;JF (PM);CR (Dados);DL (Segurança);GP (Pesq.Op.);Sponsor;Professor
+1.1.1 TAP;R/A;C;C;C;A;I
+1.1.2 EAP;R/A;C;C;C;I;I
+1.1.3 Backlog (User Stories);R/A;C;C;C;C;I
+1.1.4 Matriz RACI;R/A;C;C;C;I;I
+1.1.5 Cronograma Gantt;R/A;C;C;C;C;I
+1.1.6 Custos;R/A;I;I;I;A;I
+1.2.1 Ata de Kickoff;R/A;C;C;C;A;I
+1.2.2 Atas semanais;R/A;I;I;I;I;I
+2.1.1 Modelos SQLAlchemy;R/A;C;C;I;I;I
+2.1.2 Seed do banco;R/A;I;I;I;I;I
+2.2.1 Rotas públicas FastAPI;R/A;I;C;I;I;I
+2.2.2 Rotas administrativas;R/A;I;C;I;C;I
+2.2.3 Rotas LGPD;C;I;R/A;I;I;I
+2.3.1 Tema dark CSS;R/A;I;I;I;I;I
+2.3.2 Templates HTML;R/A;I;I;I;I;I
+3.1.1 Endpoints export CSV;R/A;C;I;I;I;I
+3.2.1 Notebook ETL+KPIs;I;R/A;I;I;I;I
+3.2.2 Notebook Visualizações;I;R/A;I;I;I;I
+3.3 Análise crítica D2;C;R/A;I;I;I;I
+4.1.1 Bcrypt + rate-limit;C;I;R/A;I;I;I
+4.1.2 Cabeçalhos HTTP;C;I;R/A;I;I;I
+4.1.3 Audit log;C;I;R/A;I;I;I
+4.2.1 Política de privacidade;C;I;R/A;I;C;I
+4.2.2 Consentimento LGPD;C;I;R/A;I;I;I
+4.2.3 Anonimização;C;I;R/A;I;I;I
+4.3 docs/d3_seguranca.md;I;I;R/A;I;I;I
+5.1.1 Notebook lucro (PuLP);I;C;I;R/A;I;I
+5.1.2 Notebook alocação (PuLP);I;C;I;R/A;I;I
+5.2 What-If documentado;I;C;I;R/A;I;I
+6.1 Testes de aceitação;R;R;R;R;A;I
+6.2 PDF consolidado;R/A;C;C;C;I;I
+6.3 Apresentação banca;R;R;R;R;I;A
+6.4 Tag v1.0 GitHub;R/A;I;I;I;I;I

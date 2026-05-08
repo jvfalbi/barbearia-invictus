@@ -1,0 +1,17 @@
+﻿Categoria;Item / Recurso;Qtd / Tempo;Valor Unitário (R$);Total (R$)
+Equipe;João Falbi (PM + Backend);120 h;80.0;9600.0
+Equipe;Calebe Ramos (Cientista de Dados);50 h;100.0;5000.0
+Equipe;Diego Lima (Segurança);55 h;110.0;6050.0
+Equipe;Guilherme Pimenta (Pesq. Operacional);45 h;95.0;4275.0
+Infraestrutura;Servidor em Nuvem (AWS EC2 t3.micro);3 meses;60.0;180.0
+Infraestrutura;Registro de domínio .com.br;1 ano;40.0;40.0
+Infraestrutura;Certificado SSL (Let's Encrypt);1 ano;0.0;0.0
+Software;Google Workspace (e-mail+drive);3 meses;30.0;90.0
+Software;Conta GitHub (Free);3 meses;0.0;0.0
+Software;Google Colab (Free);3 meses;0.0;0.0
+Software;Lucidchart (trial);1 mês;0.0;0.0
+Operacional;Reuniões com Sponsor;8 reuniões;30.0;240.0
+Operacional;Impressão e encadernação;3 cópias;50.0;150.0
+;;;Subtotal:;25625.00
+Contingência;Reserva 10%;—;—;2562.50
+;;;TOTAL DO PROJETO:;28187.50

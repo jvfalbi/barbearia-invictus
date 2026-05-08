@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Agendamento confirmado · Barbearia Invictus{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <div class="card-dark success-card">
+        <div class="success-icon">✓</div>
+        <h2>Agendamento confirmado!</h2>
+        <p class="muted">Enviamos uma cópia mental para você 😉</p>
+        <ul class="resumo">
+          <li><span>Cliente</span><strong>{{ cliente.nome }}</strong></li>
+          <li><span>Barbeiro</span><strong>{{ barbeiro.nome }}</strong></li>
+          <li><span>Serviço</span><strong>{{ servico.nome }} — R$ {{ "%.2f"|format(servico.preco) }}</strong></li>
+          <li><span>Data</span><strong>{{ data.strftime("%d/%m/%Y") }}</strong></li>
+          <li><span>Hora</span><strong>{{ hora.strftime("%H:%M") }}</strong></li>
+        </ul>
+        <div class="actions">
+          <a href="/agendar" class="btn btn-secondary">Novo agendamento</a>
+          <a href="/" class="btn btn-primary">Voltar ao início</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

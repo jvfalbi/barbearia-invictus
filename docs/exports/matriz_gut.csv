@@ -1,0 +1,21 @@
+﻿#;Ameaça;Referência;G;U;T;Nota (G×U×T)
+1;Vazamento de banco de dados;OWASP A02;5;5;5;125
+2;Brute force no login admin;OWASP A07;5;5;4;100
+3;SQL Injection;OWASP A03;5;4;5;100
+4;XSS armazenado;OWASP A03;5;4;4;80
+5;Session hijacking;OWASP A07;5;4;4;80
+6;Clickjacking;OWASP A05;4;4;4;64
+7;Credential stuffing;OWASP A07;4;4;4;64
+8;Stack trace exposto;OWASP A05;4;4;4;64
+9;CSRF;OWASP A01;4;3;4;48
+10;IDOR;OWASP A01;4;4;3;48
+11;Mass assignment;OWASP A08;4;4;3;48
+13;Dependência vulnerável (CVE);OWASP A06;3;4;4;48
+14;Path Traversal;CWE-22;4;4;3;48
+18;Vazamento de PII em logs;LGPD/CWE-532;4;4;3;48
+17;Privilege escalation;OWASP A01;5;3;3;45
+12;DoS por inundação;OWASP A04;3;4;3;36
+15;Open Redirect;OWASP A01;3;3;3;27
+19;Race condition no estoque;CWE-362;3;3;3;27
+20;SSRF;OWASP A10;4;3;2;24
+16;MIME sniffing;OWASP A05;3;3;2;18

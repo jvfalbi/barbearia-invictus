@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+{% block title %}Painel Admin · Barbearia Invictus{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="admin-header">
+        <div>
+          <h2 class="section-title" style="margin:0;text-align:left">Painel do Administrador</h2>
+          <p class="section-sub" style="margin:.25rem 0 0;text-align:left">Bem-vindo, <strong>{{ admin_user }}</strong>.</p>
+        </div>
+        <div class="admin-toolbar">
+          <a href="/admin/auditoria" class="btn btn-secondary btn-sm">Auditoria</a>
+          <a href="/admin/export/agendamentos.csv" class="btn btn-secondary btn-sm">Export CSV</a>
+          <a href="/admin/logout" class="btn btn-secondary btn-sm">Sair</a>
+        </div>
+      </div>
+
+      <div class="admin-stats">
+        <div class="stat-card">
+          <span>Clientes</span>
+          <strong>{{ total_clientes }}</strong>
+        </div>
+        <div class="stat-card">
+          <span>Agendamentos</span>
+          <strong>{{ total_agendamentos }}</strong>
+        </div>
+        <div class="stat-card">
+          <span>Hoje</span>
+          <strong>{{ agendamentos_hoje }}</strong>
+        </div>
+        <div class="stat-card">
+          <span>Data</span>
+          <strong style="font-size:1rem">{{ hoje.strftime("%d/%m/%Y") }}</strong>
+        </div>
+      </div>
+
+      <nav class="admin-tabs">
+        <a href="/admin?tab=agendamentos" class="tab {{ 'is-active' if tab == 'agendamentos' else '' }}">Agendamentos</a>
+        <a href="/admin?tab=barbeiros" class="tab {{ 'is-active' if tab == 'barbeiros' else '' }}">Barbeiros</a>
+        <a href="/admin?tab=servicos" class="tab {{ 'is-active' if tab == 'servicos' else '' }}">Serviços</a>
+        <a href="/admin?tab=produtos" class="tab {{ 'is-active' if tab == 'produtos' else '' }}">Produtos</a>
+      </nav>
+
+      {# ========== AGENDAMENTOS ========== #}
+      {% if tab == 'agendamentos' %}
+        <div class="admin-section">
+          <div class="section-head">
+            <h3>Todos os agendamentos</h3>
+            <span class="muted">{{ agendamentos|length }} registros</span>
+          </div>
+          {% if agendamentos %}
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Cliente</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Barbeiro</th>
+                    <th>Serviço</th>
+                    <th>Status</th>
+                    <th class="th-actions">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for a in agendamentos %}
+                    <tr>
+                      <td>{{ a.cliente.nome }}</td>
+                      <td>{{ a.data.strftime("%d/%m/%Y") }}</td>
+                      <td>{{ a.hora.strftime("%H:%M") }}</td>
+                      <td>{{ a.barbeiro.nome }}</td>
+                      <td>{{ a.servico.nome }}</td>
+                      <td>
+                        <span class="badge {% if a.status == 'concluido' %}done{% elif a.status == 'cancelado' %}cancel{% endif %}">{{ a.status }}</span>
+                      </td>
+                      <td class="td-actions">
+                        <a href="/admin/agendamentos/{{ a.id }}/edit" class="btn-action edit">Editar</a>
+                        <form method="post" action="/admin/agendamentos/{{ a.id }}/delete" class="inline-form" onsubmit="return confirm('Excluir este agendamento?');">
+                          <button type="submit" class="btn-action delete">Excluir</button>
+                        </form>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          {% else %}
+            <p class="empty">Nenhum agendamento ainda.</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {# ========== BARBEIROS ========== #}
+      {% if tab == 'barbeiros' %}
+        <div class="admin-section">
+          <div class="section-head">
+            <h3>Equipe</h3>
+            <span class="muted">{{ barbeiros|length }} cadastrados</span>
+          </div>
+          {% if barbeiros %}
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Especialidade</th>
+                    <th>Foto</th>
+                    <th>Ativo</th>
+                    <th class="th-actions">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for b in barbeiros %}
+                    <tr>
+                      <td>{{ b.nome }}</td>
+                      <td class="muted">{{ b.especialidade or '—' }}</td>
+                      <td class="muted">{{ b.foto or '—' }}</td>
+                      <td>
+                        {% if b.ativo %}
+                          <span class="badge done">ativo</span>
+                        {% else %}
+                          <span class="badge cancel">inativo</span>
+                        {% endif %}
+                      </td>
+                      <td class="td-actions">
+                        <a href="/admin/barbeiros/{{ b.id }}/edit" class="btn-action edit">Editar</a>
+                        <form method="post" action="/admin/barbeiros/{{ b.id }}/delete" class="inline-form" onsubmit="return confirm('Excluir/desativar este barbeiro?');">
+                          <button type="submit" class="btn-action delete">Excluir</button>
+                        </form>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          {% else %}
+            <p class="empty">Nenhum barbeiro cadastrado.</p>
+          {% endif %}
+        </div>
+
+        <div class="card-dark">
+          <h3 style="margin:0 0 1rem">Novo barbeiro</h3>
+          <form method="post" action="/admin/barbeiros" class="booking-form">
+            <label>Nome<input name="nome" required /></label>
+            <label>Especialidade<input name="especialidade" placeholder="Ex.: degradê, barba" /></label>
+            <button type="submit" class="btn btn-primary btn-sm">Adicionar</button>
+          </form>
+        </div>
+      {% endif %}
+
+      {# ========== SERVIÇOS ========== #}
+      {% if tab == 'servicos' %}
+        <div class="admin-section">
+          <div class="section-head">
+            <h3>Tabela de serviços</h3>
+            <span class="muted">{{ servicos|length }} cadastrados</span>
+          </div>
+          {% if servicos %}
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Serviço</th>
+                    <th>Duração</th>
+                    <th>Preço</th>
+                    <th class="th-actions">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for s in servicos %}
+                    <tr>
+                      <td>{{ s.nome }}</td>
+                      <td>{{ s.duracao_minutos }} min</td>
+                      <td>R$ {{ "%.2f"|format(s.preco) }}</td>
+                      <td class="td-actions">
+                        <a href="/admin/servicos/{{ s.id }}/edit" class="btn-action edit">Editar</a>
+                        <form method="post" action="/admin/servicos/{{ s.id }}/delete" class="inline-form" onsubmit="return confirm('Excluir este serviço?');">
+                          <button type="submit" class="btn-action delete">Excluir</button>
+                        </form>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          {% else %}
+            <p class="empty">Nenhum serviço cadastrado.</p>
+          {% endif %}
+        </div>
+
+        <div class="card-dark">
+          <h3 style="margin:0 0 1rem">Novo serviço</h3>
+          <form method="post" action="/admin/servicos" class="booking-form">
+            <label>Nome<input name="nome" required /></label>
+            <div class="row-2">
+              <label>Duração (min)<input name="duracao_minutos" type="number" min="5" max="480" value="30" required /></label>
+              <label>Preço (R$)<input name="preco" required placeholder="45,00" /></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
+          </form>
+        </div>
+      {% endif %}
+
+      {# ========== PRODUTOS ========== #}
+      {% if tab == 'produtos' %}
+        <div class="admin-section">
+          <div class="section-head">
+            <h3>Estoque de produtos</h3>
+            <span class="muted">{{ produtos|length }} cadastrados</span>
+          </div>
+          {% if produtos %}
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Status</th>
+                    <th class="th-actions">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for p in produtos %}
+                    <tr>
+                      <td>
+                        <div><strong>{{ p.nome }}</strong></div>
+                        {% if p.descricao %}<div class="muted" style="font-size:.78rem">{{ p.descricao }}</div>{% endif %}
+                      </td>
+                      <td>R$ {{ "%.2f"|format(p.preco) }}</td>
+                      <td>
+                        <div class="stock-control">
+                          <form method="post" action="/admin/produtos/{{ p.id }}/estoque" class="inline-form">
+                            <input type="hidden" name="delta" value="-1" />
+                            <button type="submit" class="stock-btn" title="Diminuir">−</button>
+                          </form>
+                          <span class="stock-num">{{ p.estoque }}</span>
+                          <form method="post" action="/admin/produtos/{{ p.id }}/estoque" class="inline-form">
+                            <input type="hidden" name="delta" value="1" />
+                            <button type="submit" class="stock-btn" title="Aumentar">+</button>
+                          </form>
+                        </div>
+                      </td>
+                      <td>
+                        {% if p.estoque == 0 %}
+                          <span class="badge cancel">Sem estoque</span>
+                        {% elif p.estoque <= 5 %}
+                          <span class="badge warn">Baixo</span>
+                        {% else %}
+                          <span class="badge done">OK</span>
+                        {% endif %}
+                      </td>
+                      <td class="td-actions">
+                        <a href="/admin/produtos/{{ p.id }}/edit" class="btn-action edit">Editar</a>
+                        <form method="post" action="/admin/produtos/{{ p.id }}/delete" class="inline-form" onsubmit="return confirm('Excluir este produto?');">
+                          <button type="submit" class="btn-action delete">Excluir</button>
+                        </form>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          {% else %}
+            <p class="empty">Nenhum produto cadastrado.</p>
+          {% endif %}
+        </div>
+
+        <div class="card-dark">
+          <h3 style="margin:0 0 1rem">Novo produto</h3>
+          <form method="post" action="/admin/produtos" class="booking-form">
+            <label>Nome<input name="nome" required /></label>
+            <label>Descrição<input name="descricao" placeholder="Breve descrição" /></label>
+            <div class="row-2">
+              <label>Preço (R$)<input name="preco" required placeholder="29,90" /></label>
+              <label>Estoque<input name="estoque" type="number" min="0" value="0" /></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
+          </form>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

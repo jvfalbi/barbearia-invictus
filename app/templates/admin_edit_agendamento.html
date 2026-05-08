@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Editar agendamento · Admin{% endblock %}
+{% block content %}
+  <section class="section">
+    <div class="container container-sm">
+      <a href="/admin?tab=agendamentos" class="back-link">← Voltar ao painel</a>
+      <div class="card-dark">
+        <h2 style="margin:0 0 1.25rem">Editar agendamento #{{ ag.id }}</h2>
+
+        <form method="post" action="/admin/agendamentos/{{ ag.id }}/edit" class="booking-form">
+          <label>
+            Cliente
+            <input name="cliente_nome" value="{{ ag.cliente.nome }}" required />
+          </label>
+
+          <label>
+            Barbeiro
+            <select name="barbeiro_id" required>
+              {% for b in barbeiros %}
+                <option value="{{ b.id }}" {% if b.id == ag.barbeiro_id %}selected{% endif %}>{{ b.nome }}</option>
+              {% endfor %}
+            </select>
+          </label>
+
+          <label>
+            Serviço
+            <select name="servico_id" required>
+              {% for s in servicos %}
+                <option value="{{ s.id }}" {% if s.id == ag.servico_id %}selected{% endif %}>{{ s.nome }} — R$ {{ "%.2f"|format(s.preco) }}</option>
+              {% endfor %}
+            </select>
+          </label>
+
+          <div class="row-2">
+            <label>
+              Data
+              <input name="data" type="date" value="{{ ag.data.isoformat() }}" required />
+            </label>
+            <label>
+              Hora
+              <input name="hora" type="time" value="{{ ag.hora.strftime('%H:%M') }}" required />
+            </label>
+          </div>
+
+          <label>
+            Status
+            <select name="status">
+              <option value="confirmado" {% if ag.status == 'confirmado' %}selected{% endif %}>Confirmado</option>
+              <option value="concluido" {% if ag.status == 'concluido' %}selected{% endif %}>Concluído</option>
+              <option value="cancelado" {% if ag.status == 'cancelado' %}selected{% endif %}>Cancelado</option>
+            </select>
+          </label>
+
+          <div class="actions" style="justify-content:flex-start;margin-top:.5rem">
+            <button type="submit" class="btn btn-primary">Salvar alterações</button>
+            <a href="/admin?tab=agendamentos" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}
