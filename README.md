@@ -8,6 +8,19 @@
 >
 > 🟢 **Validação Sinal Verde com Prof. Felipe: 04/05/2026** (Fase 4 — obrigatória)
 
+## 🌐 Demo online (link público)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jvfalbi/barbearia-invictus)
+
+> Após o deploy no Render, o link público fica em
+> `https://barbearia-invictus.onrender.com` (pode levar ~30 s para acordar
+> na primeira visita do dia — é o cold start do plano grátis).
+
+**Como usar o link no dia da banca:**
+- **Cliente:** abrir `/` para ver a home, `/agendar` para agendar, `/produtos` para ver estoque
+- **Admin:** `/admin/login` — usuário `admin` / senha `admin123` (trocar antes da banca)
+- **LGPD:** `/privacidade` e `/lgpd/meus-dados`
+
 ---
 
 ## 📌 Integrantes
