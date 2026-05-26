@@ -45,6 +45,7 @@ O sistema permite:
 | João Vitor Falbi | 3023100887 | Organização do projeto e gerenciamento do repositório GitHub |
 | Bryan dos Santos Pereira | 3026104844 | Documentação do projeto e auxílio no planejamento |
 | Guilherme Pedroso Perrone | 3023101525 | Desenvolvimento do sistema de agendamentos e cadastro de serviços |
+| Nikolas Brito da Silva | 3023104557 | Organização do projeto e gerenciamento do repositório GitHub |
 
 ---
 
