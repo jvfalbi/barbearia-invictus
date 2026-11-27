@@ -6,9 +6,10 @@ Sistema desenvolvido para gerenciamento de uma barbearia, oferecendo funcionalid
 
 https://github.com/jvfalbi/barbearia-invictus
 
-## 🌐 Site (demonstração)
+## 🌐 Site no ar
 
-https://jvfalbi.github.io/barbearia-invictus/
+- **Sistema completo (Railway):** https://web-production-b683214a.up.railway.app/ — agendamento, login e painel administrativo funcionando
+- **Demonstração estática (GitHub Pages):** https://jvfalbi.github.io/barbearia-invictus/
 
 > Versão estática das páginas públicas, publicada pelo GitHub Pages. Agendamento, login e painel administrativo funcionam apenas no sistema completo rodando com o servidor Python. Para atualizar o site: `python scripts/gerar_site_estatico.py . site` (Python 3.10+) e publicar a pasta `site/` na branch `gh-pages`.
 
