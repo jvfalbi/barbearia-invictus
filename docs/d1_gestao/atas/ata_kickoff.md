@@ -17,6 +17,12 @@
 | Calebe Fernandes Ramos | Cientista de Dados (D2) | ✅ |
 | Diego Lima Dantas | Especialista em Segurança (D3) | ✅ |
 | Guilherme Camelo Pimenta | Pesquisador Operacional (D4) | ✅ |
+| Vinicius Cardoso Marano | Desenvolvedor Front-end | ✅ |
+| Cauan Dantas Braga | Apoio em Segurança (Autenticação) | ✅ |
+| Guilherme Pedroso Perrone | Desenvolvedor Backend (Agendamentos) | ✅ |
+| Bryan dos Santos Pereira | Documentador | ✅ |
+| Nikolas Brito da Silva | Apoio de Gestão (GitHub) | ✅ |
+| Nickolas de Sousa Delgado | Analista de Testes (QA) | ✅ |
 
 ## Pauta
 
@@ -42,7 +48,7 @@
 
 - ✅ TAP aprovado pelo Sponsor (assinatura física a coletar e anexar).
 - ✅ Cronograma macro aprovado (11 semanas, entrega final em 22/05/2026).
-- ✅ Orçamento estimado em R$ 28.187,50 aprovado.
+- ✅ Orçamento estimado em R$ 43.257,50 aprovado.
 
 ## Próximos passos (Action Items)
 
@@ -63,5 +69,11 @@
 | Membro D2 | Calebe Fernandes Ramos | __________________________ |
 | Membro D3 | Diego Lima Dantas | __________________________ |
 | Membro D4 | Guilherme Camelo Pimenta | __________________________ |
+| Membro — Desenvolvedor Front-end | Vinicius Cardoso Marano | __________________________ |
+| Membro — Apoio em Segurança (Autenticação) | Cauan Dantas Braga | __________________________ |
+| Membro — Desenvolvedor Backend (Agendamentos) | Guilherme Pedroso Perrone | __________________________ |
+| Membro — Documentador | Bryan dos Santos Pereira | __________________________ |
+| Membro — Apoio de Gestão (GitHub) | Nikolas Brito da Silva | __________________________ |
+| Membro — Analista de Testes (QA) | Nickolas de Sousa Delgado | __________________________ |
 
 > Imprimir, coletar assinaturas e escanear como anexo do PDF final.

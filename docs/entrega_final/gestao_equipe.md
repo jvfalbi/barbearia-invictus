@@ -6,7 +6,7 @@
 > desenvolveu no projeto"* aparece como **erro que reduz a nota**.
 >
 > Este documento detalha individualmente as entregas de cada um dos
-> 4 integrantes, em formato auditável (cada item aponta para o arquivo
+> 10 integrantes, em formato auditável (cada item aponta para o arquivo
 > ou commit no GitHub).
 
 ---
@@ -19,7 +19,13 @@
 | **Calebe Fernandes Ramos** | Cientista de Dados | D2 (Análise de Dados) | 50 h |
 | **Diego Lima Dantas** | Especialista em Segurança | D3 (Segurança) | 55 h |
 | **Guilherme Camelo Pimenta** | Pesquisador Operacional | D4 (Pesquisa Operacional) | 45 h |
-| | | **Total:** | **270 h** |
+| **Vinicius Cardoso Marano** | Desenvolvedor Front-end | Backend / Frontend | 35 h |
+| **Cauan Dantas Braga** | Apoio em Segurança (Autenticação) | D3 (Segurança) — apoio | 30 h |
+| **Guilherme Pedroso Perrone** | Desenvolvedor Backend (Agendamentos) | Backend / Frontend | 35 h |
+| **Bryan dos Santos Pereira** | Documentador | D1 (Gestão) — apoio | 25 h |
+| **Nikolas Brito da Silva** | Apoio de Gestão (GitHub) | D1 (Gestão) — apoio | 20 h |
+| **Nickolas de Sousa Delgado** | Analista de Testes (QA) | Testes / Homologação | 30 h |
+| | | **Total:** | **445 h** |
 
 ---
 
@@ -33,7 +39,7 @@
 | 1.2 Estrutura Analítica (EAP / WBS) | `docs/d1_gestao/1.2_eap.md` (com Mermaid) |
 | 1.3 Matriz RACI | `docs/d1_gestao/1.3_matriz_raci.md` + XLSX colorido |
 | 1.4 Cronograma Gantt | `docs/d1_gestao/1.4_cronograma.md` (com Mermaid) |
-| 1.5 Custos (R$ 28.187,50) | `docs/d1_gestao/1.5_custos.md` + XLSX |
+| 1.5 Custos (R$ 43.257,50) | `docs/d1_gestao/1.5_custos.md` + XLSX |
 | 1.6 Riscos + **Análise Crítica da Gestão** | `docs/d1_gestao/1.6_riscos.md` |
 | 1.7 Plano de Comunicação | `docs/d1_gestao/1.7_comunicacao.md` |
 | 1.8 Backlog Ágil (18 User Stories) | `docs/d1_gestao/1.8_backlog.md` |
@@ -133,17 +139,118 @@
 
 ---
 
+## Vinicius Cardoso Marano — Desenvolvedor Front-end
+
+### Interface do sistema
+
+| Entregável | Arquivo |
+|---|---|
+| Tema CSS dark da Barbearia (cores, tipografia, responsividade) | `app/static/style.css` |
+| Layout e organização visual dos templates Jinja2 | `app/templates/` |
+| Páginas públicas (home, agendar, produtos, privacidade) | `app/templates/index.html` e demais |
+
+### Contribuições cruzadas
+
+- **R** nos pacotes 2.3.1 e 2.3.2 da EAP junto com João.
+- **C** no Backlog — sugeriu melhorias de usabilidade nas User Stories.
+
+---
+
+## Cauan Dantas Braga — Apoio em Segurança (Autenticação)
+
+### Login e autenticação
+
+| Entregável | Arquivo |
+|---|---|
+| Tela de login administrativo | `app/templates/admin_login.html` |
+| Hash bcrypt das senhas de admin (com Diego) | `app/security.py: hash_password()` |
+| Rate-limit + lockout do login (com Diego) | `app/security.py: registrar_falha()` |
+
+### Contribuições cruzadas
+
+- **R** no pacote 4.1.1 da EAP junto com Diego.
+- **C** nos cabeçalhos HTTP e no audit log.
+
+---
+
+## Guilherme Pedroso Perrone — Desenvolvedor Backend (Agendamentos)
+
+### Agendamentos e serviços
+
+| Entregável | Arquivo |
+|---|---|
+| Fluxo de agendamento online | `app/main.py: agendar_create()` |
+| CRUD de serviços e barbeiros | `app/main.py` + `app/templates/admin_*.html` |
+| Rotas públicas e administrativas (com João) | `app/main.py` |
+
+### Contribuições cruzadas
+
+- **R** nos pacotes 2.2.1 e 2.2.2 da EAP junto com João.
+- **C** na modelagem do banco SQLAlchemy.
+
+---
+
+## Bryan dos Santos Pereira — Documentador
+
+### Documentação e planejamento
+
+| Entregável | Arquivo |
+|---|---|
+| README inicial do projeto | `README.md` |
+| Apoio na redação das atas de reunião | `docs/d1_gestao/atas/*.md` |
+| Apoio no Backlog Ágil | `docs/d1_gestao/1.8_backlog.md` |
+| Revisão e formatação ABNT do PDF final (com João) | `docs/entrega_final/pdf_estrutura_abnt.md` |
+
+### Contribuições cruzadas
+
+- **R** nos pacotes 1.1.3, 1.2.2 e 6.2 da EAP junto com João.
+
+---
+
+## Nikolas Brito da Silva — Apoio de Gestão (GitHub)
+
+### Organização do projeto e GitHub
+
+| Entregável | Arquivo |
+|---|---|
+| Criação e organização do repositório (com João) | GitHub `jvfalbi/barbearia-invictus` |
+| Controle de versões e revisão de PRs | histórico de commits |
+| Tag `v1.0` de entrega | GitHub Releases |
+
+### Contribuições cruzadas
+
+- **R** no pacote 6.4 da EAP junto com João.
+- **C** no planejamento do cronograma.
+
+---
+
+## Nickolas de Sousa Delgado — Analista de Testes (QA)
+
+### Testes e validação
+
+| Entregável | Arquivo |
+|---|---|
+| Testes manuais de aceitação das User Stories (US-01 a US-18) | `docs/d1_gestao/1.8_backlog.md` |
+| Validação das funcionalidades antes da entrega | checklist em `docs/entrega_final/checklist_entrega.md` |
+| Revisão final + verificação de links públicos | cronograma, atividade 25 |
+
+### Contribuições cruzadas
+
+- **R** no pacote 6.1 da EAP (testes de aceitação), com apoio da equipe toda.
+
+---
+
 ## Atividades realizadas em conjunto pela equipe toda
 
 | Atividade | Quem participa | Quando |
 |---|---|---|
-| Reunião de Kickoff com Sponsor | João + Calebe + Diego + Guilherme + Sponsor | 02/03/2026 |
-| Validação de escopo com Prof. Felipe | João + Calebe + Diego + Guilherme | 13/03/2026 |
-| Sprint Reviews quinzenais | João + Calebe + Diego + Guilherme + Sponsor | a cada 14 dias |
-| **Sinal Verde com Prof. Felipe** | João + Calebe + Diego + Guilherme | 04/05/2026 |
-| Testes manuais de aceitação (US-01 a US-18) | João + Calebe + Diego + Guilherme | 11–17/05/2026 |
-| Gravação do vídeo de 10 min | João + Calebe + Diego + Guilherme | 11–17/05/2026 |
-| Apresentação final | João + Calebe + Diego + Guilherme | 22/05/2026 |
+| Reunião de Kickoff com Sponsor | Equipe toda (10 integrantes) + Sponsor | 02/03/2026 |
+| Validação de escopo com Prof. Felipe | Equipe toda (10 integrantes) | 13/03/2026 |
+| Sprint Reviews quinzenais | Equipe toda (10 integrantes) + Sponsor | a cada 14 dias |
+| **Sinal Verde com Prof. Felipe** | Equipe toda (10 integrantes) | 04/05/2026 |
+| Testes manuais de aceitação (US-01 a US-18) | Equipe toda (10 integrantes) | 11–17/05/2026 |
+| Gravação do vídeo de 10 min | Equipe toda (10 integrantes) | 11–17/05/2026 |
+| Apresentação final | Equipe toda (10 integrantes) | 22/05/2026 |
 
 ---
 
@@ -154,8 +261,14 @@ Toda contribuição individual pode ser verificada via:
 ```bash
 git log --author="Calebe" --pretty=format:"%h %ad %s" --date=short
 git log --author="Diego" --pretty=format:"%h %ad %s" --date=short
-git log --author="Guilherme" --pretty=format:"%h %ad %s" --date=short
+git log --author="Guilherme Camelo" --pretty=format:"%h %ad %s" --date=short
 git log --author="João" --pretty=format:"%h %ad %s" --date=short
+git log --author="Vinicius" --pretty=format:"%h %ad %s" --date=short
+git log --author="Cauan" --pretty=format:"%h %ad %s" --date=short
+git log --author="Guilherme Pedroso" --pretty=format:"%h %ad %s" --date=short
+git log --author="Bryan" --pretty=format:"%h %ad %s" --date=short
+git log --author="Nikolas" --pretty=format:"%h %ad %s" --date=short
+git log --author="Nickolas" --pretty=format:"%h %ad %s" --date=short
 ```
 
 > Os commits do GitHub formam o registro auditável das entregas individuais

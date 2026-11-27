@@ -17,6 +17,12 @@
 | Calebe Fernandes Ramos | Dados | ✅ |
 | Diego Lima Dantas | Segurança | ✅ |
 | Guilherme Camelo Pimenta | Pesq. Operacional | ✅ |
+| Vinicius Cardoso Marano | Desenvolvedor Front-end | ✅ |
+| Cauan Dantas Braga | Apoio em Segurança (Autenticação) | ✅ |
+| Guilherme Pedroso Perrone | Desenvolvedor Backend (Agendamentos) | ✅ |
+| Bryan dos Santos Pereira | Documentador | ✅ |
+| Nikolas Brito da Silva | Apoio de Gestão (GitHub) | ✅ |
+| Nickolas de Sousa Delgado | Analista de Testes (QA) | ✅ |
 
 ## Entregas demonstradas
 
