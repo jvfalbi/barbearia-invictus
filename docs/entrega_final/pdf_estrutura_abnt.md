@@ -31,10 +31,16 @@
                         UNIVERSIDADE NOVE DE JULHO — UNINOVE
                         ESCOLA DE TECNOLOGIA E INOVAÇÃO
 
+                              Bryan dos Santos Pereira
                               Calebe Fernandes Ramos
+                              Cauan Dantas Braga
                               Diego Lima Dantas
                               Guilherme Camelo Pimenta
+                              Guilherme Pedroso Perrone
                               João Vitor Falbi
+                              Nickolas de Sousa Delgado
+                              Nikolas Brito da Silva
+                              Vinicius Cardoso Marano
 
 
                        BARBEARIA INVICTUS — PLATAFORMA DE
@@ -57,10 +63,16 @@
 ## Modelo da Folha de Rosto
 
 ```
-                              Calebe Fernandes Ramos    — RA: ______
-                              Diego Lima Dantas         — RA: ______
-                              Guilherme Camelo Pimenta  — RA: ______
-                              João Vitor Falbi          — RA: ______
+                              Bryan dos Santos Pereira   — RA: 3026104844
+                              Calebe Fernandes Ramos     — RA: 3023200406
+                              Cauan Dantas Braga         — RA: 3023101661
+                              Diego Lima Dantas          — RA: 3123102326
+                              Guilherme Camelo Pimenta   — RA: 3023102974
+                              Guilherme Pedroso Perrone  — RA: 3023101525
+                              João Vitor Falbi           — RA: 3023100887
+                              Nickolas de Sousa Delgado  — RA: 3022104520
+                              Nikolas Brito da Silva     — RA: 3023104557
+                              Vinicius Cardoso Marano    — RA: 3023100110
 
 
                    BARBEARIA INVICTUS — PLATAFORMA DE

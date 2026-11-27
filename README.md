@@ -46,6 +46,7 @@ O sistema permite:
 | Bryan dos Santos Pereira | 3026104844 | Documentação do projeto e auxílio no planejamento |
 | Guilherme Pedroso Perrone | 3023101525 | Desenvolvimento do sistema de agendamentos e cadastro de serviços |
 | Nikolas Brito da Silva | 3023104557 | Organização do projeto e gerenciamento do repositório GitHub |
+| Nickolas de Sousa Delgado | 3022104520 | _A definir_ |
 
 ---
 
