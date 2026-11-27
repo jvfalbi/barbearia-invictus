@@ -35,18 +35,18 @@ O sistema permite:
 
 # 👥 Equipe de Desenvolvimento
 
-| Nome | RA | Responsabilidade |
-|---|---|---|
-| Calebe Fernandes Ramos | 3023200406 | Estruturação do banco de dados e modelagem das tabelas do sistema |
-| Diego Lima Dantas | 3123102326 | Desenvolvimento backend e integração das funcionalidades do sistema |
-| Vinicius Cardoso Marano | 3023100110 | Desenvolvimento da interface visual e organização do layout |
-| Cauan Dantas Braga | 3023101661 | Implementação do sistema de login e autenticação |
-| Guilherme Camelo Pimenta | 3023102974 | Testes do sistema e validação das funcionalidades |
-| João Vitor Falbi | 3023100887 | Organização do projeto e gerenciamento do repositório GitHub |
-| Bryan dos Santos Pereira | 3026104844 | Documentação do projeto e auxílio no planejamento |
-| Guilherme Pedroso Perrone | 3023101525 | Desenvolvimento do sistema de agendamentos e cadastro de serviços |
-| Nikolas Brito da Silva | 3023104557 | Organização do projeto e gerenciamento do repositório GitHub |
-| Nickolas de Sousa Delgado | 3022104520 | Testes do sistema e validação das funcionalidades |
+| Nome | RA | Papel | Responsabilidade |
+|---|---|---|---|
+| **João Vitor Falbi** | 3023100887 | Gerente de Projeto + Backend | Coordenação do projeto (D1 — Gestão), backend FastAPI e banco de dados |
+| Calebe Fernandes Ramos | 3023200406 | Cientista de Dados (D2) | ETL com pandas, KPIs e visualizações |
+| Diego Lima Dantas | 3123102326 | Especialista em Segurança (D3) | LGPD, hash bcrypt, audit log e OWASP |
+| Guilherme Camelo Pimenta | 3023102974 | Pesquisador Operacional (D4) | Modelagem PuLP e otimização de lucro/escala |
+| Vinicius Cardoso Marano | 3023100110 | Desenvolvedor Front-end | Interface visual, templates e layout |
+| Cauan Dantas Braga | 3023101661 | Apoio em Segurança (Autenticação) | Login, autenticação, bcrypt e rate-limit |
+| Guilherme Pedroso Perrone | 3023101525 | Desenvolvedor Backend (Agendamentos) | Agendamentos e cadastro de serviços |
+| Bryan dos Santos Pereira | 3026104844 | Documentador | Documentação do projeto e apoio ao planejamento |
+| Nikolas Brito da Silva | 3023104557 | Apoio de Gestão (GitHub) | Organização do projeto e repositório GitHub |
+| Nickolas de Sousa Delgado | 3022104520 | Analista de Testes (QA) | Testes e validação das funcionalidades |
 
 ---
 
