@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de Privacidade · Barbearia Invictus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body class="page-privacidade">
+<div class="demo-banner" style="background:#b45309;color:#fff;text-align:center;padding:8px 12px;font:500 14px Inter,sans-serif">
+  Versão de demonstração (GitHub Pages) — agendamentos e login funcionam apenas no sistema completo rodando com o servidor Python.
+</div>
+<script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Esta é a versão de demonstração no GitHub Pages.\nPara agendar ou acessar o painel, rode o sistema completo (veja o README).');
+}, true);
+</script>
+
+    <header class="site-header">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">⚔</span>
+        <span class="logo-text">BARBEARIA INVICTUS</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="">INÍCIO</a>
+        <a href="agendar.html" class="">AGENDAR</a>
+        <a href="produtos.html" class="">PRODUTOS</a>
+        <a href="admin.html" class="">ADMIN</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      
+  <section class="section">
+    <div class="container container-sm">
+      <h2 class="section-title">Política de Privacidade</h2>
+      <p class="section-sub">Conformidade com a Lei nº 13.709/2018 (LGPD).</p>
+
+      <div class="card-dark">
+        <h3 style="margin-top:0">1. Dados que coletamos</h3>
+        <ul class="lgpd-list">
+          <li><strong>Nome completo</strong> — para identificação no atendimento.</li>
+          <li><strong>Telefone</strong> (opcional) — para confirmar/reagendar o horário.</li>
+          <li><strong>E-mail</strong> (opcional) — para comprovante e comunicação.</li>
+          <li><strong>Histórico de agendamentos</strong> — para gestão da agenda.</li>
+          <li><strong>Endereço IP e data/hora de acesso</strong> — para segurança e auditoria.</li>
+        </ul>
+
+        <h3>2. Finalidade e base legal (Art. 7º LGPD)</h3>
+        <ul class="lgpd-list">
+          <li><strong>Execução do serviço de agendamento</strong> — Art. 7º, V (execução de contrato).</li>
+          <li><strong>Confirmação por telefone/e-mail</strong> — Art. 7º, I (consentimento livre e informado).</li>
+          <li><strong>Auditoria de acessos administrativos</strong> — Art. 7º, II (cumprimento de obrigação legal e segurança).</li>
+        </ul>
+
+        <h3>3. Compartilhamento</h3>
+        <p>Não vendemos, alugamos ou compartilhamos seus dados com terceiros para fins de marketing.
+        Apenas a equipe interna (barbeiros e administração) tem acesso.</p>
+
+        <h3>4. Tempo de armazenamento</h3>
+        <p>Os dados pessoais são mantidos enquanto houver relação ativa com a Barbearia Invictus.
+        Após sua solicitação de exclusão, os dados são <strong>anonimizados</strong> em até 7 dias úteis.
+        Os registros de agendamento permanecem (sem identificação pessoal) para fins fiscais e estatísticos.</p>
+
+        <h3>5. Seus direitos (Art. 18 LGPD)</h3>
+        <ul class="lgpd-list">
+          <li>Confirmação da existência de tratamento dos seus dados.</li>
+          <li>Acesso e correção de dados incompletos, inexatos ou desatualizados.</li>
+          <li>Anonimização ou eliminação de dados desnecessários.</li>
+          <li>Revogação do consentimento a qualquer momento.</li>
+        </ul>
+
+        <h3>6. Segurança</h3>
+        <p>Adotamos práticas de segurança da informação alinhadas ao OWASP Top 10:
+        senhas de administradores são armazenadas com hash <code>bcrypt</code>,
+        comunicação protegida por cabeçalhos de segurança HTTP,
+        proteção contra ataques de força bruta no login,
+        registro de auditoria de todas as ações administrativas.</p>
+
+        <h3>7. Encarregado (DPO)</h3>
+        <p class="muted">contato@barbeariainvictus.com.br · (11) 0000-0000</p>
+
+        <div class="actions" style="justify-content:flex-start;margin-top:1.5rem">
+          <a href="lgpd.html" class="btn btn-secondary">Gerenciar meus dados</a>
+          <a href="agendar.html" class="btn btn-primary">Agendar atendimento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>© 2026 Barbearia Invictus · Estilo é atitude.</div>
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <span>·</span>
+        <a href="lgpd.html">Excluir meus dados (LGPD)</a>
+      </div>
+    </footer>
+  </body>
+</html>

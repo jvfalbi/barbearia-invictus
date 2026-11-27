@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Admin · Barbearia Invictus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body class="page-admin">
+<div class="demo-banner" style="background:#b45309;color:#fff;text-align:center;padding:8px 12px;font:500 14px Inter,sans-serif">
+  Versão de demonstração (GitHub Pages) — agendamentos e login funcionam apenas no sistema completo rodando com o servidor Python.
+</div>
+<script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Esta é a versão de demonstração no GitHub Pages.\nPara agendar ou acessar o painel, rode o sistema completo (veja o README).');
+}, true);
+</script>
+
+    <header class="site-header">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">⚔</span>
+        <span class="logo-text">BARBEARIA INVICTUS</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="">INÍCIO</a>
+        <a href="agendar.html" class="">AGENDAR</a>
+        <a href="produtos.html" class="">PRODUTOS</a>
+        <a href="admin.html" class="active">ADMIN</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      
+  <section class="section">
+    <div class="container container-xs">
+      <div class="card-dark">
+        <h2 class="section-title" style="text-align:center">Painel Administrativo</h2>
+        <p class="section-sub" style="text-align:center">Acesso restrito à equipe Invictus.</p>
+
+        
+
+        <form class="booking-form" method="post" action="admin.html">
+          <label>
+            Usuário
+            <input name="usuario" required autofocus value="admin" />
+          </label>
+          <label>
+            Senha
+            <input name="senha" type="password" required />
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+        </form>
+
+        <p class="muted" style="margin-top:1rem;text-align:center">
+          Padrão de demonstração: <code>admin</code> / <code>admin123</code>
+        </p>
+      </div>
+    </div>
+  </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>© 2026 Barbearia Invictus · Estilo é atitude.</div>
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <span>·</span>
+        <a href="lgpd.html">Excluir meus dados (LGPD)</a>
+      </div>
+    </footer>
+  </body>
+</html>

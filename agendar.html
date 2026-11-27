@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agendar · Barbearia Invictus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body class="page-agendar">
+<div class="demo-banner" style="background:#b45309;color:#fff;text-align:center;padding:8px 12px;font:500 14px Inter,sans-serif">
+  Versão de demonstração (GitHub Pages) — agendamentos e login funcionam apenas no sistema completo rodando com o servidor Python.
+</div>
+<script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Esta é a versão de demonstração no GitHub Pages.\nPara agendar ou acessar o painel, rode o sistema completo (veja o README).');
+}, true);
+</script>
+
+    <header class="site-header">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">⚔</span>
+        <span class="logo-text">BARBEARIA INVICTUS</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="">INÍCIO</a>
+        <a href="agendar.html" class="active">AGENDAR</a>
+        <a href="produtos.html" class="">PRODUTOS</a>
+        <a href="admin.html" class="">ADMIN</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      
+  <section class="section">
+    <div class="container container-sm">
+      <h2 class="section-title">Agendar horário</h2>
+      <p class="section-sub">Escolha o barbeiro, o serviço e o horário desejado.</p>
+
+      <div class="barber-cards">
+        
+          <button type="button" class="barber-card" data-id="1">
+            <div class="barber-photo">
+              
+                <img src="static/barbeiros/calebe.jpg" alt="Calebe" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'barber-initials',textContent:'C'}))" />
+              
+            </div>
+            <div class="barber-name">Calebe</div>
+          </button>
+        
+          <button type="button" class="barber-card" data-id="2">
+            <div class="barber-photo">
+              
+                <img src="static/barbeiros/diego.jpg" alt="Diego" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'barber-initials',textContent:'D'}))" />
+              
+            </div>
+            <div class="barber-name">Diego</div>
+          </button>
+        
+          <button type="button" class="barber-card" data-id="3">
+            <div class="barber-photo">
+              
+                <img src="static/barbeiros/guilherme.jpg" alt="Guilherme" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'barber-initials',textContent:'G'}))" />
+              
+            </div>
+            <div class="barber-name">Guilherme</div>
+          </button>
+        
+          <button type="button" class="barber-card" data-id="4">
+            <div class="barber-photo">
+              
+                <img src="static/barbeiros/joao.jpg" alt="João" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'barber-initials',textContent:'J'}))" />
+              
+            </div>
+            <div class="barber-name">João</div>
+          </button>
+        
+      </div>
+
+      <form class="booking-form card-dark" method="post" action="agendar.html">
+        <label>
+          Nome
+          <input name="nome" required placeholder="Seu nome completo" />
+        </label>
+
+        <div class="row-2">
+          <label>
+            Telefone (opcional)
+            <input name="telefone" placeholder="(11) 99999-0000" />
+          </label>
+          <label>
+            E-mail (opcional)
+            <input name="email" type="email" placeholder="seu@email.com" />
+          </label>
+        </div>
+
+        <label>
+          Barbeiro
+          <select name="barbeiro_id" id="barbeiro_id" required>
+            <option value="">Selecione...</option>
+            
+              <option value="1">Calebe</option>
+            
+              <option value="2">Diego</option>
+            
+              <option value="3">Guilherme</option>
+            
+              <option value="4">João</option>
+            
+          </select>
+        </label>
+
+        <label>
+          Serviço
+          <select name="servico_id" required>
+            <option value="">Selecione...</option>
+            
+              <option value="2">Barba — R$ 30.00</option>
+            
+              <option value="1">Corte — R$ 35.00</option>
+            
+              <option value="3">Corte + Barba — R$ 60.00</option>
+            
+              <option value="4">Pigmentação — R$ 50.00</option>
+            
+          </select>
+        </label>
+
+        <div class="row-2">
+          <label>
+            Data
+            <input name="data" id="data-input" type="text" value="2026-11-26" placeholder="Selecione a data" required readonly />
+          </label>
+          <label>
+            Hora
+            <select name="hora" required>
+              
+                <option value="09:00">09:00</option>
+              
+                <option value="10:00">10:00</option>
+              
+                <option value="11:00">11:00</option>
+              
+                <option value="13:00">13:00</option>
+              
+                <option value="14:00">14:00</option>
+              
+                <option value="15:00">15:00</option>
+              
+                <option value="16:00">16:00</option>
+              
+                <option value="17:00">17:00</option>
+              
+                <option value="18:00">18:00</option>
+              
+            </select>
+          </label>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" name="consentimento_lgpd" required />
+          <span>Li e concordo com a <a href="privacidade.html" target="_blank" style="color:var(--red);text-decoration:underline">Política de Privacidade</a> e autorizo o tratamento dos meus dados pessoais conforme a LGPD.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-lg">Confirmar Agendamento</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+  <script>
+    (function () {
+      const cards = document.querySelectorAll('.barber-card');
+      const select = document.getElementById('barbeiro_id');
+
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          cards.forEach((c) => c.classList.remove('is-active'));
+          card.classList.add('is-active');
+          if (select) select.value = card.dataset.id;
+        });
+      });
+
+      if (window.flatpickr) {
+        flatpickr('#data-input', {
+          locale: 'pt',
+          dateFormat: 'Y-m-d',
+          altInput: true,
+          altFormat: 'd/m/Y',
+          minDate: 'today',
+          disableMobile: true,
+        });
+      }
+    })();
+  </script>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>© 2026 Barbearia Invictus · Estilo é atitude.</div>
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <span>·</span>
+        <a href="lgpd.html">Excluir meus dados (LGPD)</a>
+      </div>
+    </footer>
+  </body>
+</html>

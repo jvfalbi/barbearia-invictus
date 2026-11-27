@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Produtos · Barbearia Invictus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body class="page-produtos">
+<div class="demo-banner" style="background:#b45309;color:#fff;text-align:center;padding:8px 12px;font:500 14px Inter,sans-serif">
+  Versão de demonstração (GitHub Pages) — agendamentos e login funcionam apenas no sistema completo rodando com o servidor Python.
+</div>
+<script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Esta é a versão de demonstração no GitHub Pages.\nPara agendar ou acessar o painel, rode o sistema completo (veja o README).');
+}, true);
+</script>
+
+    <header class="site-header">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">⚔</span>
+        <span class="logo-text">BARBEARIA INVICTUS</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="">INÍCIO</a>
+        <a href="agendar.html" class="">AGENDAR</a>
+        <a href="produtos.html" class="active">PRODUTOS</a>
+        <a href="admin.html" class="">ADMIN</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Nossos Produtos</h2>
+      <p class="section-sub">Leve a qualidade da Barbearia Invictus para casa.</p>
+
+      
+        <div class="products-grid">
+          
+            <article class="product-card">
+              <div class="product-image">
+                
+                  <img src="static/produtos/cera-fosca.jpg" alt="Cera Fosca" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product-placeholder',textContent:'C'}))" />
+                
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Cera Fosca</h3>
+                
+                  <p class="product-desc">Acabamento fosco com duração prolongada.</p>
+                
+                <div class="product-meta">
+                  <span class="product-price">R$ 34.90</span>
+                  <span class="product-stock ">Estoque: 15</span>
+                </div>
+                <div class="product-actions">
+                  <button type="button" class="btn btn-primary btn-sm">Reservar</button>
+                  <a
+                    class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/5511900000000?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20produto%3A%20Cera%20Fosca"
+                    target="_blank"
+                    rel="noopener"
+                  >WhatsApp</a>
+                </div>
+              </div>
+            </article>
+          
+            <article class="product-card">
+              <div class="product-image">
+                
+                  <img src="static/produtos/gel-fixador.jpg" alt="Gel Fixador Forte" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product-placeholder',textContent:'G'}))" />
+                
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Gel Fixador Forte</h3>
+                
+                  <p class="product-desc">Fixação máxima sem ressecar os fios.</p>
+                
+                <div class="product-meta">
+                  <span class="product-price">R$ 22.90</span>
+                  <span class="product-stock ">Estoque: 20</span>
+                </div>
+                <div class="product-actions">
+                  <button type="button" class="btn btn-primary btn-sm">Reservar</button>
+                  <a
+                    class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/5511900000000?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20produto%3A%20Gel%20Fixador%20Forte"
+                    target="_blank"
+                    rel="noopener"
+                  >WhatsApp</a>
+                </div>
+              </div>
+            </article>
+          
+            <article class="product-card">
+              <div class="product-image">
+                
+                  <img src="static/produtos/maquina-corte.jpg" alt="Máquina de Corte Premium" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product-placeholder',textContent:'M'}))" />
+                
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Máquina de Corte Premium</h3>
+                
+                  <p class="product-desc">Alto desempenho e durabilidade.</p>
+                
+                <div class="product-meta">
+                  <span class="product-price">R$ 249.90</span>
+                  <span class="product-stock low">Estoque: 5</span>
+                </div>
+                <div class="product-actions">
+                  <button type="button" class="btn btn-primary btn-sm">Reservar</button>
+                  <a
+                    class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/5511900000000?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20produto%3A%20M%C3%A1quina%20de%20Corte%20Premium"
+                    target="_blank"
+                    rel="noopener"
+                  >WhatsApp</a>
+                </div>
+              </div>
+            </article>
+          
+            <article class="product-card">
+              <div class="product-image">
+                
+                  <img src="static/produtos/pomada.jpg" alt="Pomada Modeladora" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product-placeholder',textContent:'P'}))" />
+                
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Pomada Modeladora</h3>
+                
+                  <p class="product-desc">Controle e fixação com estilo.</p>
+                
+                <div class="product-meta">
+                  <span class="product-price">R$ 29.90</span>
+                  <span class="product-stock ">Estoque: 12</span>
+                </div>
+                <div class="product-actions">
+                  <button type="button" class="btn btn-primary btn-sm">Reservar</button>
+                  <a
+                    class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/5511900000000?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20produto%3A%20Pomada%20Modeladora"
+                    target="_blank"
+                    rel="noopener"
+                  >WhatsApp</a>
+                </div>
+              </div>
+            </article>
+          
+            <article class="product-card">
+              <div class="product-image">
+                
+                  <img src="static/produtos/pos-barba.jpg" alt="Pós Barba Premium" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product-placeholder',textContent:'P'}))" />
+                
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Pós Barba Premium</h3>
+                
+                  <p class="product-desc">Hidrata e acalma a pele após o barbear.</p>
+                
+                <div class="product-meta">
+                  <span class="product-price">R$ 19.90</span>
+                  <span class="product-stock ">Estoque: 18</span>
+                </div>
+                <div class="product-actions">
+                  <button type="button" class="btn btn-primary btn-sm">Reservar</button>
+                  <a
+                    class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/5511900000000?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20produto%3A%20P%C3%B3s%20Barba%20Premium"
+                    target="_blank"
+                    rel="noopener"
+                  >WhatsApp</a>
+                </div>
+              </div>
+            </article>
+          
+            <article class="product-card">
+              <div class="product-image">
+                
+                  <img src="static/produtos/shampoo.jpg" alt="Shampoo Antirresíduos" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product-placeholder',textContent:'S'}))" />
+                
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">Shampoo Antirresíduos</h3>
+                
+                  <p class="product-desc">Limpeza profunda para cabelo e barba.</p>
+                
+                <div class="product-meta">
+                  <span class="product-price">R$ 29.90</span>
+                  <span class="product-stock ">Estoque: 8</span>
+                </div>
+                <div class="product-actions">
+                  <button type="button" class="btn btn-primary btn-sm">Reservar</button>
+                  <a
+                    class="btn btn-whatsapp btn-sm"
+                    href="https://wa.me/5511900000000?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20produto%3A%20Shampoo%20Antirres%C3%ADduos"
+                    target="_blank"
+                    rel="noopener"
+                  >WhatsApp</a>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      
+    </div>
+  </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>© 2026 Barbearia Invictus · Estilo é atitude.</div>
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <span>·</span>
+        <a href="lgpd.html">Excluir meus dados (LGPD)</a>
+      </div>
+    </footer>
+  </body>
+</html>
