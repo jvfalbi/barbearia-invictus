@@ -9,6 +9,7 @@ Equipe;Guilherme Perrone (Desenvolvedor Backend — Agendamentos);35 h;80.0;2800
 Equipe;Bryan Pereira (Documentador);25 h;70.0;1750.0
 Equipe;Nikolas Silva (Apoio de Gestão — GitHub);20 h;70.0;1400.0
 Equipe;Nickolas Delgado (Analista de Testes — QA);30 h;75.0;2250.0
+Equipe;Brenno Louro (Desenvolvedor Front-end (apoio));25 h;80.0;2000.0
 Infraestrutura;Servidor em Nuvem (AWS EC2 t3.micro);3 meses;60.0;180.0
 Infraestrutura;Registro de domínio .com.br;1 ano;40.0;40.0
 Infraestrutura;Certificado SSL (Let's Encrypt);1 ano;0.0;0.0
@@ -18,6 +19,6 @@ Software;Google Colab (Free);3 meses;0.0;0.0
 Software;Lucidchart (trial);1 mês;0.0;0.0
 Operacional;Reuniões com Sponsor;8 reuniões;30.0;240.0
 Operacional;Impressão e encadernação;3 cópias;50.0;150.0
-;;;Subtotal:;39325.00
-Contingência;Reserva 10%;—;—;3932.50
-;;;TOTAL DO PROJETO:;43257.50
+;;;Subtotal:;41325.00
+Contingência;Reserva 10%;—;—;4132.50
+;;;TOTAL DO PROJETO:;45457.50

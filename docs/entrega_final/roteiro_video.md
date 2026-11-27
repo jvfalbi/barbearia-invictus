@@ -27,8 +27,8 @@
 > de projeto, e aqui comigo estão **Calebe** (Análise de Dados),
 > **Diego** (Segurança da Informação), **Guilherme Camelo** (Pesquisa Operacional),
 > **Vinicius** (Front-end), **Cauan** (Autenticação), **Guilherme Perrone**
-> (Agendamentos), **Bryan** (Documentação), **Nikolas** (GitHub) e
-> **Nickolas** (Testes).
+> (Agendamentos), **Bryan** (Documentação), **Nikolas** (GitHub),
+> **Nickolas** (Testes) e **Brenno** (Front-end).
 >
 > Nosso projeto é a **Barbearia Invictus**, uma microempresa de São
 > Paulo. O problema que escolhemos resolver é claro: a barbearia perdia

@@ -28,6 +28,7 @@
 | Bryan dos Santos Pereira | Documentador | ✅ |
 | Nikolas Brito da Silva | Apoio de Gestão (GitHub) | ✅ |
 | Nickolas de Sousa Delgado | Analista de Testes (QA) | ✅ |
+| Brenno Ferraz Louro | Desenvolvedor Front-end (apoio) | ✅ |
 
 ## Pauta (envio prévio em 03/05/2026, 24h antes)
 
@@ -63,7 +64,7 @@
 | Backlog (1.3) — 18 User Stories | Completo | _..._ |
 | RACI (1.4) — XLSX colorido | Completo | _..._ |
 | Cronograma (1.5) — Mermaid Gantt | Completo | _..._ |
-| Custos (1.6) — XLSX | R$ 43.257,50 | _..._ |
+| Custos (1.6) — XLSX | R$ 45.457,50 | _..._ |
 | Riscos + Comunicação (1.7) | 10 riscos mapeados | _..._ |
 | GUT (D3) — 20 ameaças | OWASP/CVE referenciados | _..._ |
 | IAM (D3) — 20 políticas | NIST/Zero Trust | _..._ |

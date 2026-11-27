@@ -31,6 +31,7 @@
                         UNIVERSIDADE NOVE DE JULHO — UNINOVE
                         ESCOLA DE TECNOLOGIA E INOVAÇÃO
 
+                              Brenno Ferraz Louro
                               Bryan dos Santos Pereira
                               Calebe Fernandes Ramos
                               Cauan Dantas Braga
@@ -63,6 +64,7 @@
 ## Modelo da Folha de Rosto
 
 ```
+                              Brenno Ferraz Louro        — RA: 3023104693
                               Bryan dos Santos Pereira   — RA: 3026104844
                               Calebe Fernandes Ramos     — RA: 3023200406
                               Cauan Dantas Braga         — RA: 3023101661

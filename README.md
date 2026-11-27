@@ -53,6 +53,7 @@ O sistema permite:
 | Bryan dos Santos Pereira | 3026104844 | Documentador | Documentação do projeto e apoio ao planejamento |
 | Nikolas Brito da Silva | 3023104557 | Apoio de Gestão (GitHub) | Organização do projeto e repositório GitHub |
 | Nickolas de Sousa Delgado | 3022104520 | Analista de Testes (QA) | Testes e validação das funcionalidades |
+| Brenno Ferraz Louro | 3023104693 | Desenvolvedor Front-end (apoio) | Interface visual, templates e layout |
 
 ---
 

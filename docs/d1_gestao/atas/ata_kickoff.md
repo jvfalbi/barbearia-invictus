@@ -23,6 +23,7 @@
 | Bryan dos Santos Pereira | Documentador | ✅ |
 | Nikolas Brito da Silva | Apoio de Gestão (GitHub) | ✅ |
 | Nickolas de Sousa Delgado | Analista de Testes (QA) | ✅ |
+| Brenno Ferraz Louro | Desenvolvedor Front-end (apoio) | ✅ |
 
 ## Pauta
 
@@ -48,7 +49,7 @@
 
 - ✅ TAP aprovado pelo Sponsor (assinatura física a coletar e anexar).
 - ✅ Cronograma macro aprovado (11 semanas, entrega final em 22/05/2026).
-- ✅ Orçamento estimado em R$ 43.257,50 aprovado.
+- ✅ Orçamento estimado em R$ 45.457,50 aprovado.
 
 ## Próximos passos (Action Items)
 
@@ -75,5 +76,6 @@
 | Membro — Documentador | Bryan dos Santos Pereira | __________________________ |
 | Membro — Apoio de Gestão (GitHub) | Nikolas Brito da Silva | __________________________ |
 | Membro — Analista de Testes (QA) | Nickolas de Sousa Delgado | __________________________ |
+| Membro — Desenvolvedor Front-end (apoio) | Brenno Ferraz Louro | __________________________ |
 
 > Imprimir, coletar assinaturas e escanear como anexo do PDF final.

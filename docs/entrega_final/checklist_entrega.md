@@ -35,7 +35,7 @@
 - [x] Backlog Ágil — 18 User Stories no formato "Como [usuário], quero..."
 - [x] Matriz RACI — 33 linhas com R/A/C/I + planilha XLSX colorida
 - [x] Cronograma Gantt com dependências e caminho crítico
-- [x] Custos com contingência (R$ 43.257,50)
+- [x] Custos com contingência (R$ 45.457,50)
 - [x] Plano de Comunicação + Matriz de 10 Riscos
 - [x] **4 Atas de Reunião** (Kickoff + Sprint 1 + Sprint 2 + Sinal Verde)
 - [ ] **Imprimir TAP e Atas e coletar assinatura física do Sponsor**

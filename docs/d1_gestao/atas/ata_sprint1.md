@@ -23,6 +23,7 @@
 | Bryan dos Santos Pereira | Documentador | ✅ |
 | Nikolas Brito da Silva | Apoio de Gestão (GitHub) | ✅ |
 | Nickolas de Sousa Delgado | Analista de Testes (QA) | ✅ |
+| Brenno Ferraz Louro | Desenvolvedor Front-end (apoio) | ✅ |
 
 ## Entregas demonstradas
 

@@ -24,7 +24,7 @@
 - [x] **EAP visual** — diagrama Mermaid renderizado no [`1.2_eap.md`](1.2_eap.md) ✅ pronto para print
 - [x] **Gráfico de Gantt** — diagrama Mermaid no [`1.4_cronograma.md`](1.4_cronograma.md) ✅ pronto para print
 - [x] **Matriz RACI colorida** — [`exports/matriz_raci.xlsx`](exports/matriz_raci.xlsx) e [`.csv`](exports/matriz_raci.csv) ✅ gerados
-- [x] **Planilha de custos** — [`exports/custos.xlsx`](exports/custos.xlsx) (R$ 43.257,50) ✅ gerada
+- [x] **Planilha de custos** — [`exports/custos.xlsx`](exports/custos.xlsx) (R$ 45.457,50) ✅ gerada
 - [x] **Print do board GitHub Projects** — [`exports/board_kanban.png`](exports/board_kanban.png) ✅ gerado
 - [x] **Atas de Reunião** — [`atas/`](atas/) (Kickoff + Sprint 1 + Sprint 2 + **Sinal Verde**) ✅ prontas
 - [x] **Análise Crítica da Gestão** (caixa amarela do template) — [`1.6_riscos.md`](1.6_riscos.md) ✅ escrita

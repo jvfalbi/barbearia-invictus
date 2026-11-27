@@ -6,7 +6,7 @@
 > desenvolveu no projeto"* aparece como **erro que reduz a nota**.
 >
 > Este documento detalha individualmente as entregas de cada um dos
-> 10 integrantes, em formato auditável (cada item aponta para o arquivo
+> 11 integrantes, em formato auditável (cada item aponta para o arquivo
 > ou commit no GitHub).
 
 ---
@@ -25,7 +25,8 @@
 | **Bryan dos Santos Pereira** | Documentador | D1 (Gestão) — apoio | 25 h |
 | **Nikolas Brito da Silva** | Apoio de Gestão (GitHub) | D1 (Gestão) — apoio | 20 h |
 | **Nickolas de Sousa Delgado** | Analista de Testes (QA) | Testes / Homologação | 30 h |
-| | | **Total:** | **445 h** |
+| **Brenno Ferraz Louro** | Desenvolvedor Front-end (apoio) | Backend / Frontend | 25 h |
+| | | **Total:** | **470 h** |
 
 ---
 
@@ -39,7 +40,7 @@
 | 1.2 Estrutura Analítica (EAP / WBS) | `docs/d1_gestao/1.2_eap.md` (com Mermaid) |
 | 1.3 Matriz RACI | `docs/d1_gestao/1.3_matriz_raci.md` + XLSX colorido |
 | 1.4 Cronograma Gantt | `docs/d1_gestao/1.4_cronograma.md` (com Mermaid) |
-| 1.5 Custos (R$ 43.257,50) | `docs/d1_gestao/1.5_custos.md` + XLSX |
+| 1.5 Custos (R$ 45.457,50) | `docs/d1_gestao/1.5_custos.md` + XLSX |
 | 1.6 Riscos + **Análise Crítica da Gestão** | `docs/d1_gestao/1.6_riscos.md` |
 | 1.7 Plano de Comunicação | `docs/d1_gestao/1.7_comunicacao.md` |
 | 1.8 Backlog Ágil (18 User Stories) | `docs/d1_gestao/1.8_backlog.md` |
@@ -240,17 +241,32 @@
 
 ---
 
+## Brenno Ferraz Louro — Desenvolvedor Front-end (apoio)
+
+### Interface do sistema (com Vinicius)
+
+| Entregável | Arquivo |
+|---|---|
+| Apoio no tema CSS dark da Barbearia (cores, tipografia, responsividade) | `app/static/style.css` |
+| Apoio no layout e organização visual dos templates Jinja2 | `app/templates/` |
+
+### Contribuições cruzadas
+
+- **R** nos pacotes 2.3.1 e 2.3.2 da EAP junto com Vinicius e João.
+
+---
+
 ## Atividades realizadas em conjunto pela equipe toda
 
 | Atividade | Quem participa | Quando |
 |---|---|---|
-| Reunião de Kickoff com Sponsor | Equipe toda (10 integrantes) + Sponsor | 02/03/2026 |
-| Validação de escopo com Prof. Felipe | Equipe toda (10 integrantes) | 13/03/2026 |
-| Sprint Reviews quinzenais | Equipe toda (10 integrantes) + Sponsor | a cada 14 dias |
-| **Sinal Verde com Prof. Felipe** | Equipe toda (10 integrantes) | 04/05/2026 |
-| Testes manuais de aceitação (US-01 a US-18) | Equipe toda (10 integrantes) | 11–17/05/2026 |
-| Gravação do vídeo de 10 min | Equipe toda (10 integrantes) | 11–17/05/2026 |
-| Apresentação final | Equipe toda (10 integrantes) | 22/05/2026 |
+| Reunião de Kickoff com Sponsor | Equipe toda (11 integrantes) + Sponsor | 02/03/2026 |
+| Validação de escopo com Prof. Felipe | Equipe toda (11 integrantes) | 13/03/2026 |
+| Sprint Reviews quinzenais | Equipe toda (11 integrantes) + Sponsor | a cada 14 dias |
+| **Sinal Verde com Prof. Felipe** | Equipe toda (11 integrantes) | 04/05/2026 |
+| Testes manuais de aceitação (US-01 a US-18) | Equipe toda (11 integrantes) | 11–17/05/2026 |
+| Gravação do vídeo de 10 min | Equipe toda (11 integrantes) | 11–17/05/2026 |
+| Apresentação final | Equipe toda (11 integrantes) | 22/05/2026 |
 
 ---
 
@@ -269,6 +285,7 @@ git log --author="Guilherme Pedroso" --pretty=format:"%h %ad %s" --date=short
 git log --author="Bryan" --pretty=format:"%h %ad %s" --date=short
 git log --author="Nikolas" --pretty=format:"%h %ad %s" --date=short
 git log --author="Nickolas" --pretty=format:"%h %ad %s" --date=short
+git log --author="Brenno" --pretty=format:"%h %ad %s" --date=short
 ```
 
 > Os commits do GitHub formam o registro auditável das entregas individuais
